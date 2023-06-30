@@ -7,7 +7,7 @@ const butInstall = document.getElementById('buttonInstall');
     window.addEventListener('beforeinstallprompt', (event) => {
         event.preventDefault();
         installPrompt = event;
-        butInstall.removeAttribute('hidden');
+        butInstall.classList.remove('hidden');
     });
     
     butInstall.addEventListener('click', async () => {
@@ -18,11 +18,11 @@ const butInstall = document.getElementById('buttonInstall');
         console.log(`Install prompt outcome: ${result.outcome}`);
         // should this code be removed? (see appinstalled)
         installPrompt = null;
-        butInstall.setAttribute('hidden', 'true');
+        butInstall.classList.add('hidden');
     });
     
     window.addEventListener('appinstalled', (event) => {
         installPrompt = null;
-        butInstall.setAttribute('hidden', 'true');
+        butInstall.classList.add('hidden');
     });
 })()

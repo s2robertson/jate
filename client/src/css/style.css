@@ -33,6 +33,15 @@ h1 {
   letter-spacing: 0.9px;
 }
 
+#navbar h1 {
+  flex: 1;
+  text-align: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
 .navbar-brand img {
   padding-top: 10px;
 }
