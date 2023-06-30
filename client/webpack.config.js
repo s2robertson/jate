@@ -24,6 +24,7 @@ module.exports = () => {
         swDest: 'src-sw.js'
       }),
       new WebpackPwaManifest({
+        fingerprints: false,
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E',
         description: 'A simple text editor',
@@ -34,7 +35,8 @@ module.exports = () => {
         icons: [{
           src: path.resolve('./src/images/logo.png'),
           sizes: [96, 128, 192, 256, 384, 512],
-          destination: path.join('assets', 'icons')
+          destination: path.join('assets', 'icons'),
+          purpose: 'any maskable'
         }]
       })
     ],
