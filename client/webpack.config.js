@@ -22,7 +22,10 @@ module.exports = () => {
         template: './index.html',
         title: 'J.A.T.E'
       }),
-      new GenerateSW()
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js'
+      })
     ],
 
     module: {
