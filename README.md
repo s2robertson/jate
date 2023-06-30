@@ -16,6 +16,11 @@ The user can enter text, which is saved to localStorage whenever CodeMirror emit
 (including on tab/window close), the editor contents are saved to IndexedDB.  There is a button in the top left that can be used to
 install the app as a PWA on the user's desktop.
 
+[Try it out on Heroku](https://s2robertson-jate-c143c4308be7.herokuapp.com/)
+
+## Screenshot
+![A screenshot of the JATE app](./jate-screenshot.png)
+
 ## Credits
 The initial files were provided by University of Toronto Coding Bootcamp, and they make use of [CodeMirror](https://codemirror.net/).
 In addition to the `package.json` in the root folder, there is also a `package.json` in the `clients` folder, which is where the PWA
