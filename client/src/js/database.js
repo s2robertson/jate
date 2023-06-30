@@ -28,9 +28,9 @@ export const getDb = async () => {
   const store = tx.objectStore('jate');
   const dbResult = await store.getAll();
   console.log(`Read from IndexedDB: ${dbResult}`);
-  const res = Array.isArray(dbResult) && dbResult.length > 0 ? dbResult[0].content : null;
+  const res = Array.isArray(dbResult) && dbResult.length > 0 ? dbResult[0] : null;
   if (res?.id) {
     id = res.id;
   }
-  return res;
+  return res && res.content;
 }
